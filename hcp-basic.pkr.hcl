@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "example-west" {
-  region = "use-west-2"
+  region = "us-west-2"
 
   source_ami_filter {
     filters = {
@@ -28,7 +28,7 @@ source "amazon-ebs" "example-west" {
 
 build {
   hcp_packer_registry {
-    slug        = "test-example-west"
+    bucket_name        = "test-example-west"
     description = <<EOT
 This is a description for the example HCP Packer bucket.
     EOT
